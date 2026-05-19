@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, Header
 from sqlalchemy.orm import Session
-from .database import get_db
-from .models import User
-from .schemas import UserRegister, UserLogin, TokenResponse, UserResponse
-from .utils import hash_password, verify_password, create_access_token, decode_token
+from database import get_db
+from models import User
+from schemas import UserRegister, UserLogin, TokenResponse, UserResponse
+from utils import hash_password, verify_password, create_access_token, decode_token
 import logging
 
 logger = logging.getLogger(__name__)

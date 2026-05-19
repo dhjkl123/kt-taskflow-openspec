@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from .database import get_db
-from .models import User, Team, Task, TaskStatus
-from .schemas import TaskCreate, TaskUpdate, TaskStatusUpdate, TaskResponse
-from .auth import get_current_user
+from database import get_db
+from models import User, Team, Task, TaskStatus
+from schemas import TaskCreate, TaskUpdate, TaskStatusUpdate, TaskResponse
+from auth import get_current_user
 import logging
 
 logger = logging.getLogger(__name__)

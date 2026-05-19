@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from .database import get_db
-from .models import User, Team
-from .schemas import TeamCreate, TeamResponse, TeamJoin, MemberResponse
-from .auth import get_current_user
-from .utils import generate_invite_code
+from database import get_db
+from models import User, Team
+from schemas import TeamCreate, TeamResponse, TeamJoin, MemberResponse
+from auth import get_current_user
+from utils import generate_invite_code
 import logging
 
 logger = logging.getLogger(__name__)

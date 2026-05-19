@@ -1,12 +1,17 @@
+import sys
+import os
 import logging
+
+sys.path.insert(0, os.path.dirname(__file__))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .database import engine, Base
-from .models import User, Team, Task, Message
-from .auth import router as auth_router
-from .teams import router as teams_router
-from .tasks_api import router as tasks_router
-from .messages_api import router as messages_router
+from database import engine, Base
+from models import User, Team, Task, Message
+from auth import router as auth_router
+from teams import router as teams_router
+from tasks_api import router as tasks_router
+from messages_api import router as messages_router
 
 # Setup logging
 logging.basicConfig(
