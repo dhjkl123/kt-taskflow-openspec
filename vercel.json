@@ -1,6 +1,5 @@
 {
     "buildCommand": "npm install --prefix frontend 2>/dev/null || true",
-    "outputDirectory": "frontend",
     "env": {
         "DATABASE_URL": "postgresql://user:password@localhost/taskflow",
         "JWT_SECRET": "production-secret-change-this-in-vercel-dashboard"
