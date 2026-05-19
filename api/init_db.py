@@ -1,5 +1,5 @@
-from database import engine, Base
-from models import User, Team, Task, Message
+from .database import engine, Base
+from .models import User, Team, Task, Message
 
 def init_db():
     """Create all database tables"""
