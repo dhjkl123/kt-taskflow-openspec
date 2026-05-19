@@ -1,0 +1,15 @@
+- generic [ref=e19]:
+  - banner [ref=e20]:
+    - generic [ref=e21]:
+      - heading "TaskFlow" [level=1] [ref=e22]
+      - button "로그아웃" [ref=e23] [cursor=pointer]
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "새 팀 만들기" [level=2] [ref=e27]
+        - textbox "팀 이름" [ref=e28]
+        - button "팀 만들기" [ref=e29] [cursor=pointer]
+      - generic [ref=e30]:
+        - heading "팀에 합류하기" [level=2] [ref=e31]
+        - 'textbox "초대 코드 (예: ABCD-1234)" [ref=e32]'
+        - button "합류하기" [ref=e33] [cursor=pointer]

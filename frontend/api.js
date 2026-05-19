@@ -77,6 +77,10 @@ class APIClient {
         return this.request('GET', '/teams');
     }
 
+    getTeam(teamId) {
+        return this.request('GET', `/teams/${teamId}`);
+    }
+
     joinTeam(inviteCode) {
         return this.request('POST', '/teams/join', { invite_code: inviteCode });
     }
@@ -124,10 +128,6 @@ class APIClient {
             path += `?since=${encodeURIComponent(since)}`;
         }
         return this.request('GET', path);
-    }
-
-    getMessage(messageId) {
-        return this.request('GET', `/messages/${messageId}`);
     }
 
     deleteMessage(messageId) {

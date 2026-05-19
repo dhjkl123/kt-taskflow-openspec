@@ -1,0 +1,15 @@
+- generic [ref=e4]:
+  - heading "TaskFlow" [level=1] [ref=e5]
+  - generic [ref=e6]:
+    - heading "로그인" [level=2] [ref=e7]
+    - textbox "이메일" [ref=e8]: bob@task.com
+    - textbox "비밀번호" [ref=e9]
+    - button "로그인" [ref=e10] [cursor=pointer]
+  - separator [ref=e11]
+  - generic [ref=e12]:
+    - heading "새 계정 만들기" [level=2] [ref=e13]
+    - textbox "이메일" [ref=e14]: bob@task.com
+    - textbox "비밀번호" [ref=e15]: pass123
+    - textbox "비밀번호 확인" [ref=e16]: pass123
+    - button "회원가입" [ref=e17] [cursor=pointer]
+  - generic [ref=e18]: 회원가입 성공! 로그인하세요

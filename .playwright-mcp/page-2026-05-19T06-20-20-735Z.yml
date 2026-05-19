@@ -1,0 +1,21 @@
+- generic [ref=e72]:
+  - banner [ref=e73]:
+    - generic [ref=e74]:
+      - heading "개발팀" [level=1] [ref=e75]
+      - generic [ref=e76]:
+        - button "채팅" [ref=e77] [cursor=pointer]
+        - button "메뉴" [ref=e78] [cursor=pointer]
+  - main [ref=e79]:
+    - generic [ref=e81]:
+      - textbox "새 태스크 추가..." [ref=e82]
+      - button "추가" [ref=e83] [cursor=pointer]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - heading "할 일 (1)" [level=3] [ref=e86]
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: 로그인 기능 구현
+            - paragraph [ref=e92]: 9시간 전
+          - button "✕" [ref=e93] [cursor=pointer]
+      - heading "진행 중 (0)" [level=3] [ref=e95]
+      - heading "완료 (0)" [level=3] [ref=e97]

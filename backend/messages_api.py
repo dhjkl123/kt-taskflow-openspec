@@ -58,16 +58,6 @@ async def get_messages(team_id: int, since: str = Query(None), current_user: Use
     messages = query.order_by(Message.created_at).all()
     return messages
 
-@router.get("/messages/{message_id}", response_model=MessageResponse)
-async def get_message(message_id: int, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-    """Get message details"""
-    message = db.query(Message).filter(Message.id == message_id).first()
-    if not message:
-        raise HTTPException(status_code=404, detail="Message not found")
-
-    check_team_membership(message.team_id, current_user, db)
-    return message
-
 @router.delete("/messages/{message_id}")
 async def delete_message(message_id: int, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     """Delete a message (author only)"""

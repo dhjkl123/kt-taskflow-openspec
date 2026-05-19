@@ -58,6 +58,12 @@ async def list_teams(current_user: User = Depends(get_current_user), db: Session
 
     return [team]
 
+@router.get("/{team_id}", response_model=TeamResponse)
+async def get_team(team_id: int, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    """Get team details"""
+    team = check_team_membership(team_id, current_user, db)
+    return team
+
 @router.post("/join", response_model=dict)
 async def join_team(join_data: TeamJoin, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     """Join a team using invite code"""
