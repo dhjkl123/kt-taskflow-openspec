@@ -7,7 +7,7 @@
     },
     "routes": [
         {
-            "src": "/api/(.*)",
+            "src": "/(api|health|auth|teams|tasks|messages)/(.*)",
             "dest": "/api/index.py"
         },
         {
