@@ -19,10 +19,5 @@
     "env": {
         "DATABASE_URL": "sqlite:///taskflow.db",
         "JWT_SECRET": "production-secret-change-this-in-vercel-dashboard"
-    },
-    "functions": {
-        "backend/main.py": {
-            "runtime": "python3.14"
-        }
     }
 }
