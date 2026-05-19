@@ -1,0 +1,28 @@
+{
+    "buildCommand": "pip install -r backend/requirements.txt",
+    "installCommand": "echo 'Using pip in buildCommand'",
+    "outputDirectory": ".",
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "backend/main.py"
+        },
+        {
+            "src": "/health",
+            "dest": "backend/main.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "frontend/index.html"
+        }
+    ],
+    "env": {
+        "DATABASE_URL": "@database_url",
+        "JWT_SECRET": "@jwt_secret"
+    },
+    "functions": {
+        "backend/main.py": {
+            "runtime": "python3.9"
+        }
+    }
+}
